@@ -2718,7 +2718,11 @@
         const imgPath = `assets/img/gambar-suku/${imageMap[prov.nama]}`;
 
         document.getElementById("detailImgBox").innerHTML = `
-          <img src="${imgPath}" alt="${prov.suku}">
+          <img
+              src="${imgPath}"
+              alt="${prov.suku}"
+              onerror="this.src='assets/img/no-image.png'"
+          >
           <div class="img-label">${prov.suku}</div>
 
     `;
@@ -2757,6 +2761,48 @@
         });
 
       function openFullscreen(prov) {
+        const imageMap = {
+          Aceh: "Suku-Dominan-Aceh.jpeg",
+          "Sumatera Utara": "Suku-Dominan-Sumatera Utara.jpeg",
+          "Sumatera Barat": "Suku-Dominan-Sumatera Barat.jpeg",
+          Riau: "Suku-Dominan-Riau.jpeg",
+          "Kepulauan Riau": "Suku-Dominan-Kepulauan Riau.jpeg",
+          Jambi: "Suku-Dominan-Jambi.jpeg",
+          Bengkulu: "Suku-Dominan-Bengkulu.jpeg",
+          "Sumatera Selatan": "Suku-Dominan-Sumatera Selatan.jpeg",
+          "Bangka Belitung": "Suku-Dominan-Bangka Belitung.jpeg",
+          Lampung: "Suku-Dominan-Lampung.jpeg",
+          "DKI Jakarta": "Suku-Dominan-DKI Jakarta.jpeg",
+          Banten: "Suku-Dominan-Banten.jpeg",
+          "Jawa Barat": "Suku-Dominan-Jawa Barat.jpeg",
+          "Jawa Tengah": "Suku-Dominan-Jawa Tengah.jpeg",
+          "DI Yogyakarta": "Suku-Dominan-DI Yogjakarta.jpeg",
+          "Jawa Timur": "Suku-Dominan-Jawa Timur.jpeg",
+          Bali: "Suku-Dominan-Bali.jpeg",
+          "Nusa Tenggara Barat": "Suku-Dominan-NTB.jpeg",
+          "Nusa Tenggara Timur": "Suku-Dominan-NTT.jpeg",
+          "Kalimantan Barat": "Suku-Dominan-Kalimantan Barat.jpeg",
+          "Kalimantan Tengah": "Suku-Dominan-Kalimantan Tengah.jpeg",
+          "Kalimantan Selatan": "Suku-Dominan-Kalimantan Selatan.jpeg",
+          "Kalimantan Timur": "Suku-Dominan-Kalimantan Timur.jpeg",
+          "Kalimantan Utara": "Suku-Dominan-Kalimantan Utara.jpeg",
+          "Sulawesi Utara": "Suku-Dominan-Sulawesi Utara.jpeg",
+          "Sulawesi Tengah": "Suku-Dominan-Sulawesi Tengah.jpeg",
+          "Sulawesi Selatan": "Suku-Dominan-Sulawesi Selatan.jpeg",
+          "Sulawesi Tenggara": "Suku-Dominan-Sulawesi Tenggara.jpeg",
+          "Sulawesi Barat": "Suku-Dominan-Sulawesi Barat.jpeg",
+          Gorontalo: "Suku-Dominan-Gorontalo.jpeg",
+          Maluku: "Suku-Dominan-Maluku.jpeg",
+          "Maluku Utara": "Suku-Dominan-Maluku Utara.jpeg",
+          "Papua Barat": "Suku-Dominan-PapuaBarat.jpeg",
+          Papua: "Suku-Dominan-Papua.jpeg",
+          "Papua Tengah": "Suku-Dominan-Papua Tengah.jpeg",
+          "Papua Pegunungan": "Suku-Dominan-Papua Pegunungan.jpeg",
+          "Papua Selatan": "Suku-Dominan-Papua Selatan.jpeg",
+          "Papua Barat Daya": "Suku-Dominan-Papua Barat Daya.jpeg",
+        };
+        const imgPath = `assets/img/gambar-suku/${imageMap[prov.nama]}`;
+
         document.getElementById("fsTitle").textContent =
           prov.nama.toUpperCase();
         document.getElementById("fsSubtitle").textContent =
@@ -2766,12 +2812,15 @@
           arr.map((t) => `<span class="fs-tag ${cls}">${t}</span>`).join("");
 
         document.getElementById("fsBody").innerHTML = `
+        
         <div class="fs-hero">
             <div class="fs-img-box">
-                <div class="fs-img-placeholder">
-                    <div class="big-icon">🏙️</div>
-                    <p>${prov.ibukota.toUpperCase()}</p>
-                </div>
+                <img
+                    src="${imgPath}"
+                    alt="${prov.suku}"
+                    class="fs-img"
+                    onerror="this.src='assets/img/no-image.png'"
+                >
             </div>
             <div class="fs-quick-facts">
                 <div class="fs-fact-item">
