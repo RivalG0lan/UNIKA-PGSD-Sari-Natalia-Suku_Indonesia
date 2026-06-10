@@ -157,26 +157,6 @@ This project was developed as an educational resource to:
 
 ---
 
-## Screenshots
-
-Add screenshots of:
-
-* Homepage
-* Interactive Map
-* Province Detail Panel
-* Full Information View
-* Mobile Responsive Layout
-
-Example:
-
-```md
-![Homepage](screenshots/homepage.png)
-![Province Detail](screenshots/detail.png)
-![Mobile View](screenshots/mobile.png)
-```
-
----
-
 ## Author
 
 **Sari Natalia**
